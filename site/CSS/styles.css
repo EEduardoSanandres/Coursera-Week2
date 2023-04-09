@@ -1,0 +1,92 @@
+/* Estilos para centrar el encabezado */
+header {
+    text-align: center;
+}
+
+/* Estilos para las secciones */
+.menu-section {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background-color: #ccc; /* Agregamos fondo gris */
+    margin-bottom: 10px; /* Agregamos margen inferior */
+}
+
+.menu-section p {
+    margin: 0;
+    padding: 10px;
+    background-color: #ccc; /* Fondo gris */
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #000;
+    background-color: #ccc; /* Fondo gris */
+}
+
+/* Estilos para el título de sección "Chicken" */
+.section-title-chicken {
+    background-color: pink;
+    color: #000;
+}
+
+/* Estilos para el título de sección "Beef" */
+.section-title-beef {
+    background-color: red;
+    color: #fff;
+}
+
+/* Estilos para el título de sección "Sushi" */
+.section-title-sushi {
+    background-color: yellow;
+    color: #000;
+}
+
+/* Estilos para el diseño responsivo en pantallas de 768px a 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+        gap: 10px; /* Espacio entre las columnas */
+    }
+    .menu-section {
+        padding: 20px;
+    }
+
+    #sushi-section {
+        grid-column: 1 / span 2;
+    }
+
+}
+
+/* Estilos para el diseño responsivo en pantallas de 992px en adelante */
+@media (min-width: 992px) {
+    /* Cambiamos el ancho de las secciones a 33.33% usando flexbox */
+    .section-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas de igual tamaño */
+        grid-template-rows: 1fr; /* Una sola fila */
+        gap: 10px; /* Espacio entre las columnas */
+    }
+    .menu-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Cambiamos el ancho de las secciones a 100% */
+    .section-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr; /* Dos columnas de igual tamaño */
+        grid-template-columns: 100%;
+        gap: 10px; /* Espacio entre las columnas */
+    }
+    .menu-section {
+        padding: 20px;
+    }
+}
